@@ -1,0 +1,112 @@
+# ===========================
+# Java / Maven
+# ===========================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+# ===========================
+# IDE / Editor
+# ===========================
+.idea/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ===========================
+# Logs
+# ===========================
+logs/
+*.log
+*.log.gz
+
+# ===========================
+# Banco de dados H2
+# ===========================
+*.db
+*.h2.db
+*.mv.db
+*.trace.db
+*.lck
+
+# ===========================
+# Arquivos de propriedades (com dados sensíveis)
+# ===========================
+application.properties
+application-dev.properties
+application-prod.properties
+*.secret.properties
+*.local.properties
+secrets.properties
+
+# ===========================
+# Spring Boot / Actuator
+# ===========================
+spring-boot-devtools.properties
+*.pid
+*.dump
+
+# ===========================
+# Front-end / build
+# ===========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# ===========================
+# Backup e temporários
+# ===========================
+*.bak
+*.tmp
+*.old
+*.orig
+*.rej
+*~
+
+# ===========================
+# Sistema operacional
+# ===========================
+Thumbs.db
+Desktop.ini
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ===========================
+# Lombok (opcional)
+# ===========================
+lombok.config
+
+# ===========================
+# Testes e cobertura
+# ===========================
+.surefire-*
+.attach_pid*
+hs_err_pid*
+jacoco.exec
+coverage/
+test-output/

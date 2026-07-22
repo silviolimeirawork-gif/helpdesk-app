@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>Detalhe do Ticket</title>
+</h:head>
+<h:body>
+    <h:form id="detailForm">
+        <p:growl id="growl" showDetail="true"/>
+        <p:toolbar>
+            <p:toolbarGroup>
+                <p:button value="Voltar" outcome="tickets.xhtml" icon="pi pi-arrow-left"/>
+            </p:toolbarGroup>
+        </p:toolbar>
+
+        <p:panel header="Ticket #{ticketBean.selectedTicket.id}" style="margin-top:10px;">
+            <p:panelGrid columns="2" style="width:100%;">
+                <p:outputLabel value="Título" for="title"/>
+                <p:inputText id="title" value="#{ticketBean.selectedTicket.title}" style="width:100%;"/>
+
+                <p:outputLabel value="Descrição" for="desc"/>
+                <p:inputTextarea id="desc" value="#{ticketBean.selectedTicket.description}" rows="5" style="width:100%;"/>
+
+                <p:outputLabel value="Status" for="status"/>
+                <p:selectOneMenu id="status" value="#{ticketBean.selectedTicket.status}">
+                    <f:selectItem itemValue="OPEN" itemLabel="Aberto"/>
+                    <f:selectItem itemValue="IN_PROGRESS" itemLabel="Em Andamento"/>
+                    <f:selectItem itemValue="RESOLVED" itemLabel="Resolvido"/>
+                    <f:selectItem itemValue="CLOSED" itemLabel="Fechado"/>
+                </p:selectOneMenu>
+
+                <p:outputLabel value="Sugestão IA" for="sugestao"/>
+                <p:inputTextarea id="sugestao" value="#{ticketBean.selectedTicket.aiSuggestion}" rows="3" disabled="true" style="width:100%;"/>
+
+                <p:commandButton value="Salvar" action="#{ticketBean.updateTicket}"
+                                 update="@form" oncomplete="PF('growl').show();"/>
+            </p:panelGrid>
+        </p:panel>
+    </h:form>
+</h:body>
+</html>
